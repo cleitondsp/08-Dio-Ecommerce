@@ -180,6 +180,8 @@ small {
 
 .testimonial .col-3 {
     text-align: center; /* centralizando o texto */
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 40px 20px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); /* acrescenta uma sombra na div */
     cursor: pointer; /* altera o icone do mouse quando esta encima da imagem */
@@ -211,5 +213,26 @@ small {
     font-weight: 600;
     color: #555;
     font-size: 16px;
+}
+
+/* ------------ Marcas ------------  */
+
+.brands {
+    margin: 100px auto;
+}
+
+.col-5 {
+    width: 160px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%); /* deixar as imagens em tons de cinza, quano menor a porcentagem mais colorido fica */
+    transition: 0.5s;
+}
+
+.col-5 img:hover {
+    filter: grayscale(0); /* efeito de colorido quando se passa o mouse encima, ja que deixamos tom de cinza */
 }
 
