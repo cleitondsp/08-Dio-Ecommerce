@@ -76,7 +76,7 @@ header .row {
     margin-top: 70px;
 }
 
-/* categorias */
+/* ------------ categorias ------------  */
 
 .categories {
     margin: 70px 0;
@@ -170,5 +170,46 @@ h4 {
 
 small {
     color: #555;
+}
+
+/* ------------ Opiniões ------------  */
+
+.testimonial {
+    padding-top: 100px;    
+}
+
+.testimonial .col-3 {
+    text-align: center; /* centralizando o texto */
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); /* acrescenta uma sombra na div */
+    cursor: pointer; /* altera o icone do mouse quando esta encima da imagem */
+    transition: transform 0.5s; /* temporizador pra sair do estado normal para o HOVER */
+}
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.col-3 .fas.fa-quote-left { /* era "fas fa-quote-left" precisei colocar como "fas.fa-quote-left" pra funcionar */
+    font-size: 34px;
+    color: #ff523b;
+}
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
 }
 
