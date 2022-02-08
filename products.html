@@ -9,66 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"> <!-- link pra usar icones do awesome -->
-    <title>RedStore - Ecommerce Website Design</title>
+    <title>All Products - RedStore</title>
 </head>
 <body>
 
     <!-- header e primeira section -->
 
-    <header>
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="img/logo.png" width="125px"> <!-- posso definir largura aqui, nao precisa ser no style.css -->
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Account</a></li>
-                    </ul>
-                </nav>
-                <img src="img/cart.png" width="30px" height="30px">
-                <img src="img/menu.png" class="menu-icon" onclick="menutoggle()"> <!-- adiciona o botão de menu hamburguer em telas menores -->
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" width="125px"> <!-- posso definir largura aqui, nao precisa ser no style.css -->
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <h1>Give Your Workout<br>A New Style!</h1> <!-- <br> divide a frase no meio -->
-                    <p>Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
-                    <a href="#" class="btn">Explore Now &#x2192;</a>
-                </div>
-                <div class="col-2">
-                    <img src="img/image1.png" alt="">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Categorias -->
-
-    <section class="categories">
-        <div class="small-container">
-            <div class="row"> <!-- criando 3 colunas -->
-                <div class="col-3">
-                    <img src="img/category-1.jpg" alt="">
-                </div>
-                <div class="col-3">
-                    <img src="img/category-2.jpg" alt="">
-                </div>
-                <div class="col-3">
-                    <img src="img/category-3.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Produtos -->
-
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </nav>
+            <img src="img/cart.png" width="30px" height="30px">
+            <img src="img/menu.png" class="menu-icon" onclick="menutoggle()"> <!-- adiciona o botão de menu hamburguer em telas menores -->
+        </div>            
+    </div>
+    
     <main class="small-container">
 
-        <h2 class="title">Featured Products</h2>
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select> <!-- cria um menu dropdown -->
+                <option>Default Shorting</option>
+                <option>Short by Price</option>
+                <option>Short by Popularity</option>
+                <option>Short by Rating</option>
+                <option>Short by Sale</option>
+            </select>
+        </div>
 
         <div class="row">
 
@@ -123,10 +101,8 @@
                 </div>
                 <p>$50.00</p>
             </div>
-        </div>
-
-        <h2 class="title">Latest Products</h2>
-
+        </div>  
+        
         <div class="row">
 
             <div class="col-4">
@@ -236,104 +212,16 @@
                 <p>$50.00</p>
             </div>
         </div>
-    </main>
 
-    <!-- Ofertas -->
-
-    <section class="offer">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-2">
-                    <img class="offer-img" src="img/exclusive.png">
-                </div>
-                <div class="col-2">
-                    <p>Exclusively Available on RedStore</p>
-                    <h1>Smart Band 4</h1>
-                    <small>The Mi Band 4 features a 30.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is lear as can be.</small>
-                    <a href="" class="btn">Buy Now &#8594</a>
-                </div>
-            </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#x2192;</span> <!-- &#x2192; codigo de seta pra direita -->
         </div>
-    </section>
 
-    <!-- Opiniões -->
-
-    <section class="testimonial">
-        <div class="small-container">
-            <div class="row">
-
-                <div class="col-3"> <!-- Primeiro usuario -->
-                    <i class="fas fa-quote-left"></i>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mi lorem. Morbi ornare arcu et volutpat ultricies. Phasellus eros metus, vestibulum non porta eu, semper nec eros.</p>
-                    <div class="rating">  <!-- colocando qtde de estrelas do produto -->
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <img src="img/user-1.png" alt="">
-                    <h3>Sean Parker</h3>
-                </div>
-
-                <div class="col-3"> <!-- Segundo usuario -->
-                    <i class="fas fa-quote-left"></i>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mi lorem. Morbi ornare arcu et volutpat ultricies. Phasellus eros metus, vestibulum non porta eu, semper nec eros.</p>
-                    <div class="rating">  <!-- colocando qtde de estrelas do produto -->
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <img src="img/user-2.png" alt="">
-                    <h3>Peter Parker</h3>
-                </div>
-
-                <div class="col-3"> <!-- Terceiro usuario -->
-                    <i class="fas fa-quote-left"></i>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mi lorem. Morbi ornare arcu et volutpat ultricies. Phasellus eros metus, vestibulum non porta eu, semper nec eros.</p>
-                    <div class="rating">  <!-- colocando qtde de estrelas do produto -->
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <img src="img/user-3.png" alt="">
-                    <h3>Tia May</h3>
-                </div>
-                
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Marcas -->
-
-    <section class="brands">
-        <div class="small-container">
-            <div class="row">
-
-                <div class="col-5">
-                    <img src="img/logo-godrej.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="img/logo-oppo.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="img/logo-coca-cola.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="img/logo-paypal.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="img/logo-philips.png" alt="">
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </main> 
 
     <!-- Rodapé -->
 
@@ -374,12 +262,19 @@
             </div>
             <hr> <!-- coloca uma linha horizontal -->
             <p class="copyright">Copyright 2022 - Easy Tutorials</p>
+
+
         </div>
-    </footer>  
+    </footer>
+
+
+
+
+
+   
 
 
 <!-- JS da troca de menu -->
-
 <script>
 
     var MenuItems = document.getElementById("MenuItems");
