@@ -285,3 +285,18 @@ ul {
 .app-logo {
     margin-top: 20px;
 }
+
+.app-logo img {
+    width: 140px;
+}
+
+.footer hr { /* Mudando o estilo da linha */
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;    
+}
