@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"> <!-- link pra usar icones do awesome -->
     <title>All Products - RedStore</title>
 </head>
+
 <body>
 
     <!-- header e primeira section -->
-
     
     <div class="container">
         <div class="navbar">
@@ -89,9 +89,6 @@
             <p>View More</p>
         </div>
     </div>
-
-
-
 
     <!-- Produtos -->
 
@@ -196,76 +193,57 @@
 
 
         </div>
-    </footer>
+    </footer> 
 
+    <!-- JS da troca de menu -->
 
+    <script>
 
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
 
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") 
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else 
+                {
+                    MenuItems.style.maxHeight = "0px"; 
+                }
+        }
+    </script>
 
-   
+    <!-- JS da troca de imagens do produto -->
 
+    <script>
 
-<!-- JS da troca de menu -->
-<script>
+        var ProductImg = document.getElementById("ProductImg"); /* variavel de caminho da imagem grande */
+        var SmallImg = document.getElementsByClassName("small-img"); /* variavel de caminho da imagem pequena */
 
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
+        /* Como temos quatro imagens pequenas, colocamos o nome da classe igual em todas,
+        transformamos um array quando colocamos SmallImg[0],
+        assim, quando clicamos em uma das imagens pequenas,
+        o endereço da imagem grande assume o valor dessa imagem, trocando a imagem! */
 
-    function menutoggle() {
-        if (MenuItems.style.maxHeight == "0px") 
-            {
-                MenuItems.style.maxHeight = "200px";
-            }
-        else 
-            {
-                MenuItems.style.maxHeight = "0px"; 
-            }
-    }
-</script>
+        SmallImg[0].onclick = function() 
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function() 
+        {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function() 
+        {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function() 
+        {
+            ProductImg.src = SmallImg[3].src;
+        }
 
-<!-- JS da troca de imagens do produto -->
-
-<script>
-
-    var ProductImg = document.getElementById("ProductImg"); /* variavel de caminho da imagem grande */
-    var SmallImg = document.getElementsByClassName("small-img"); /* variavel de caminho da imagem pequena */
-
-    /* Como temos quatro imagens pequenas, colocamos o nome da classe igual em todas,
-    transformamos um array quando colocamos SmallImg[0],
-    assim, quando clicamos em uma das imagens pequenas,
-    o endereço da imagem grande assume o valor dessa imagem, trocando a imagem! */
-
-    SmallImg[0].onclick = function() 
-    {
-        ProductImg.src = SmallImg[0].src;
-    }
-    SmallImg[1].onclick = function() 
-    {
-        ProductImg.src = SmallImg[1].src;
-    }
-    SmallImg[2].onclick = function() 
-    {
-        ProductImg.src = SmallImg[2].src;
-    }
-    SmallImg[3].onclick = function() 
-    {
-        ProductImg.src = SmallImg[3].src;
-    }
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </script>
     
 </body>
 </html>
