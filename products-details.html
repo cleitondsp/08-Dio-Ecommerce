@@ -37,11 +37,28 @@
     
     <!-- Detalhes do Produto -->
 
-    <div class="small-container">
+    <div class="small-container single-product">
         <div class="row">
+
             <div class="col-2">
-                <img src="img/gallery-1.jpg" width="100%">
+                <img src="img/gallery-1.jpg" width="100%" id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="img/gallery-1.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/gallery-2.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/gallery-3.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/gallery-4.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
             </div>
+
             <div class="col-2">
                 <p>Home / T-Shirt</p>
                 <h1>Red Printd T-Shirt by HRX</h1>
@@ -54,13 +71,29 @@
                     <option>Medium</option>
                     <option>Small</option>
                 </select>
+                <input type="number" value="1">
+                <a href="#" class="btn">Add to Cart</a>
+
+                <h3>Product details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>Nullam sed leo ultricies, consequat ligula et, pulvinar nunc. Cras dictum dolor metus. Ut semper eget neque ac condimentum. Donec vulputate pharetra condimentum. Ut eu scelerisque nibh, eu aliquam justo. Nam vitae luctus quam.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Titulo -->
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
         </div>
     </div>
 
 
 
 
+    <!-- Produtos -->
 
     <main class="small-container">
 
@@ -189,6 +222,50 @@
             }
     }
 </script>
+
+<!-- JS da troca de imagens do produto -->
+
+<script>
+
+    var ProductImg = document.getElementById("ProductImg"); /* variavel de caminho da imagem grande */
+    var SmallImg = document.getElementsByClassName("small-img"); /* variavel de caminho da imagem pequena */
+
+    /* Como temos quatro imagens pequenas, colocamos o nome da classe igual em todas,
+    transformamos um array quando colocamos SmallImg[0],
+    assim, quando clicamos em uma das imagens pequenas,
+    o endereço da imagem grande assume o valor dessa imagem, trocando a imagem! */
+
+    SmallImg[0].onclick = function() 
+    {
+        ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function() 
+    {
+        ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function() 
+    {
+        ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function() 
+    {
+        ProductImg.src = SmallImg[3].src;
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 </body>
 </html>
