@@ -35,84 +35,44 @@
         </div>            
     </div>
     
-    <!-- Detalhes dos itens no carrinho -->
+    <!-- Accunt Page -->
 
-    <div class="small-container cart-page">
-        <table>
-            <tr> <!-- Titulos da tabela -->
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
 
-            <tr> <!-- Descrição dos itens -->
-                <td>
-                    <div class="cart-info"> <!-- Primeiro produto -->
-                        <img src="img/buy-1.jpg" alt=""> 
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small>
-                            <br>
-                            <a href="">Remove</a>
+                <div class="col-2">
+                    <img src="img/image1.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
                         </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>                            
+                        </form>
+
                     </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
+                </div>
 
-            <tr> <!-- Descrição dos itens -->
-                <td>
-                    <div class="cart-info"> <!-- Segundo produto -->
-                        <img src="img/buy-2.jpg" alt=""> 
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $72.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$72.00</td>
-            </tr>
-
-            <tr> <!-- Descrição dos itens -->
-                <td>
-                    <div class="cart-info"> <!-- Terceiro produto -->
-                        <img src="img/buy-3.jpg" alt=""> 
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $89.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$89.00</td>
-            </tr>
-
-        </table>
-
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>$200.00</td>
-                </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>$35.00</td>
-                </tr>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>$235.00</td>
-                </tr>
-            </table>
+            </div>
         </div>
-        
     </div>
+
 
     
 
@@ -188,6 +148,30 @@
                     MenuItems.style.maxHeight = "0px"; 
                 }
         }
+    </script>
+
+    <!-- JS da troca entre Login e Registro -->
+
+    <script>
+
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+
+
     </script>
     
 </body>
